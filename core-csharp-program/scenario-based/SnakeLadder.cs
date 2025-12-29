@@ -16,7 +16,7 @@ class SnakeLadder{
 	static bool CheckWin(int[] score,int turn,int point){
 		if(score[turn] > 100){
 			score[turn] -= point;
-			return falsE;
+			return false;
 		}
 		return score[turn] == 100;
 	}
@@ -49,7 +49,7 @@ class SnakeLadder{
 			 }
 	        }
 
-		// assing ladder's places
+		// assign ladder's places
 		for(int i=1;i<=numberOfLadder;i++){
 			int randomIdx = random.Next(1,80);
 			if(board[randomIdx] == 0){
@@ -77,7 +77,7 @@ class SnakeLadder{
 				ApplySnakeOrLadder(board,score,idx);
 			}
 
-			Console.WriteLine("Positio: "+score[idx]);
+			Console.WriteLine("Position: "+score[idx]);
 			idx = (idx+1)%player;
 		}
 	}
