@@ -303,3 +303,86 @@ Applied string manipulation techniques while solving problems
 Strengthened logical reasoning and structured problem-solving approaches
 
 Improved confidence in handling real-world and interview-style questions
+
+
+📘 Day 9: Concept of Constructor & Scenario-Based Problem Solving
+====================================================================
+📅 Date: 30 December 2025
+
+🔹 Constructor and Its Types
+=============================
+Introduced the concept of Constructor in Object-Oriented Programming (OOP)
+
+Understood the need of constructors for initializing objects
+
+Learned key properties of constructors:
+----------------------------------------
+Same name as the class
+
+No return type
+
+Automatically invoked during object creation
+
+Studied different types of constructors:
+------------------------------------------
+Default Constructor
+
+Parameterized Constructor
+
+Copy Constructor (conceptual understanding)
+
+Static Constructor (basic understanding)
+
+Learned Constructor Overloading:
+---------------------------------
+Multiple constructors in a class with different parameter lists
+
+Understood the difference between:
+-----------------------------------
+Instance variables and instance methods
+
+Class (static) variables and static methods
+
+Gained clarity on how constructors help maintain object initialization and data consistency
+
+🔹 Scenario-Based Problem Solving (Core C# Concepts)
+=====================================================
+Solved scenario-based problems using core C# programming concepts
+
+Focused on procedural and logical problem-solving
+
+Applied concepts such as:
+--------------------------
+Conditional statements (if, switch)
+
+Loops (for, while)
+
+Methods and method calls
+
+Variables and data types
+
+Designed solutions without using constructors
+
+Improved understanding of program flow and logic building
+
+Practiced breaking real-world problems into step-by-step solutions
+
+🔹 Practical Application & Skill Development
+===============================================
+Practiced writing structured and readable C# code
+
+Strengthened fundamentals of Core C#
+
+Improved logical thinking and debugging skills
+
+Understood when to use:
+------------------------
+Core C# logic
+
+Object-Oriented concepts
+
+Built a strong base for learning advanced OOP topics
+
+Enhanced confidence in solving scenario-based coding problems
+
+✨ This session helped in strengthening both OOP theory and core C# problem-solving skills.
