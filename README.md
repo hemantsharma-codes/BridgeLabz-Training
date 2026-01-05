@@ -508,5 +508,41 @@ Learned how the same method can behave differently depending on the object type
 
 🔐 Access Modifiers & Inheritance
 ----------------------------------
-Understood how different access modifiers impact inheritance
-Learned which class members can be accessed by derived classes
+Understood how different access modifiers impact inheritence Learned which class members can be accessed by derived classes.
+
+
+# 📅 Day 13: Advanced Concepts of Polymorphism & Abstraction in C#
+**Date:** 05 January 2026
+
+## 🔹 Polymorphism with Interfaces
+Allows different classes to implement the same method.
+Enables flexible and loosely coupled code.
+
+## 🔹 Polymorphism with Abstract Classes
+Derived classes override base class methods.
+Runtime method selection is supported.
+
+## 🔹 Casting and is Operator with Polymorphism in C#
+Casting converts base reference to derived type.
+`is` operator checks type safety before casting.
+
+## 🔹 Abstraction
+Focuses on what an object does, not how.
+Hides internal implementation details.
+
+## 🔹 Abstract Class
+Cannot be instantiated.
+Contains abstract and concrete methods.
+
+## 🔹 Interface
+Defines a contract for classes.
+Supports multiple inheritance.
+
+## 🔹 Comparison Between Abstract Class and Interface
+Abstract class supports implementation.
+Interface supports only declarations.
+
+## 🔹 Interface vs Class
+Class represents state and behavior.
+Interface represents behavior only.
+
