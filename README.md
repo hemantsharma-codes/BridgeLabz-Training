@@ -386,3 +386,127 @@ Built a strong base for learning advanced OOP topics
 Enhanced confidence in solving scenario-based coding problems
 
 ✨ This session helped in strengthening both OOP theory and core C# problem-solving skills.
+
+
+Day 10: Keywords & Object Behavior in C# 🔑
+===========================================
+
+Date: 31 December 2025
+
+🧠 Understanding the this Keyword
+----------------------------------
+Studied how the this keyword represents the current object
+Used to clearly distinguish between instance fields and method parameters
+Helpful for constructor chaining and writing more readable code
+
+⚙️ Static Keyword in C#
+-----------------------
+Understood why the static keyword is used
+Learned that static members are associated with the class, not with individual objects
+
+🔹 Static Variables
+--------------------
+Commonly shared by all instances of a class
+Useful for storing data that should remain the same for every object
+
+🔹 Static Methods
+-------------------
+Can be called directly using the class name
+Allowed to access only static members
+
+🔹 Static Constructor
+----------------------
+Runs only once during the entire program lifecycle
+Used to initialize static members
+Invoked automatically before the first use of any static member
+
+🔹 Static Nested Class
+-----------------------
+Learned about static classes inside another class
+Helps in organizing code logically and improving structure
+
+🏁 Final Keyword (Sealed Keyword in C#)
+----------------------------------------
+Understood the concept of the final keyword (represented by sealed in C#)
+Used to prevent modification of classes or methods
+Helps enforce immutability and restrict inheritance where required
+
+🔍 is Operator
+---------------
+Learned that the is operator is used for runtime type checking
+Mainly used in conditional statements to verify object types
+
+
+Day 11: Classes, Objects & UML Basics 🧱
+=========================================
+Date: 01 January 2026
+
+🧠 Classes vs Objects in C#
+-----------------------------
+Understood the core difference between classes and objects
+Learned that a class serves as a blueprint, whereas objects are created from it
+Used real-life examples to clearly understand the distinction
+Revisited how objects access and use class members during program execution
+
+📐 Introduction to UML Diagrams
+--------------------------------
+Learned what UML (Unified Modeling Language) is used for
+Understood how UML diagrams help visualize system structure before implementation
+
+🧩 Class Diagram
+------------------
+Studied the basic layout of a class diagram
+Understood how it represents:
+
+Class name
+Attributes (variables)
+Methods (functions)
+Learned how class diagrams support object-oriented system design
+
+🔄 Sequence Diagram
+--------------------
+Introduced to the concept of sequence diagrams
+Learned that they demonstrate:
+
+Interaction between objects
+Method call flow
+Order of execution over time
+
+
+Day 12:Inheritance & Polymorphism in C# 🧬
+==========================================
+
+Date: 02 January 2026
+
+🧩 Understanding Inheritance
+-----------------------------
+Learned that inheritance enables a class to inherit properties and behaviors from another class
+Understood how inheritance supports code reuse and creates a hierarchical structure
+
+🔗 Types of Inheritance
+-------------------------
+Single-Level Inheritance – one base class and one derived class
+Multilevel Inheritance – inheritance extended across multiple levels
+Hierarchical Inheritance – multiple derived classes sharing the same base class
+
+⚙️ Key Features of Inheritance
+------------------------------
+Encourages code reusability and easier extension
+Helps in developing scalable and maintainable applications
+Enables method overriding and supports polymorphic behavior
+
+🔁 Method Overriding
+---------------------
+Learned how derived classes can redefine methods of the base class
+Understood the role of virtual and override keywords
+Focused on changing method behavior at runtime
+
+🔄 Polymorphism & Inheritance
+------------------------------
+Understood the connection between inheritance and polymorphism
+Learned how the same method can behave differently depending on the object type
+
+🔐 Access Modifiers & Inheritance
+----------------------------------
+Understood how different access modifiers impact inheritance
+Learned which class members can be accessed by derived classes
