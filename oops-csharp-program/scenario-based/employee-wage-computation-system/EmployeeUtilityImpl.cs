@@ -24,4 +24,13 @@ internal class EmployeeUtilityImpl : IEmployee
 
         return employee;
     }
+    public bool IsEmployeePresentOrAbsent(Employee employee)
+    {
+	    Random random = new Random();
+            bool isPresent = random.Next(0, 2) == 1;
+
+            employee.SetIsPresent(isPresent);
+            return isPresent;
+    }
 }
+
