@@ -46,6 +46,21 @@ internal class EmployeeUtilityImpl : IEmployee
             }
             double employeeFullDayWage = employee.GetHourlyRate() * fullTimeEmployeeWorkingHour;
             return employeeFullDayWage;
-        }
+    }
+    public double CalculateWageOfMonth(Employee employee)
+    {
+            // 8 hours for part time employee and 16 hour for full time employee
+            // 20 days in a month
+            int partTimeEmployeeWorkingHour = 8;
+            int fullTimeEmployeeWorkingHour = 16;
+            int daysInMonth = 20;
+            if(employee.GetEmployeeType() == "Part time")
+            {
+                double partTimeEmployeeMonthWage = employee.GetHourlyRate() * partTimeEmployeeWorkingHour * daysInMonth;
+                return partTimeEmployeeMonthWage;
+            }
+            double fullTimeEmployeeMonthWage = employee.GetHourlyRate() * fullTimeEmployeeWorkingHour * daysInMonth;
+            return fullTimeEmployeeMonthWage;
+    }
 }
 

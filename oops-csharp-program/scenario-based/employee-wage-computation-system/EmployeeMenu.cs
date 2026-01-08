@@ -43,6 +43,13 @@ sealed class EmployeeMenu
                         Console.WriteLine($"{emp.GetName()} is a {emp.GetEmployeeType()} employee and Wage of per day is {wage} Rs.");
                     }
                     break;
+	        case 4:
+                    foreach(Employee emp in employeeList)
+                    {
+                        double wageOfMonth = EmployeeUtility.CalculateWageOfMonth(emp);
+                        Console.WriteLine($"{emp.GetName()} is a {emp.GetEmployeeType()} and Wage of month is {wageOfMonth} Rs.");
+                    }
+                    break;
                 case 5:
                     Console.WriteLine("Exiting.....");
                     return;
