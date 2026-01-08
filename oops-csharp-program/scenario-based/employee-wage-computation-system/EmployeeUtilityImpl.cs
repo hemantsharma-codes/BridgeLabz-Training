@@ -32,5 +32,20 @@ internal class EmployeeUtilityImpl : IEmployee
             employee.SetIsPresent(isPresent);
             return isPresent;
     }
+            
+    public double CalculateDailyEmployeeWage(Employee employee)
+    {
+            // assume 8 hours for part time employee and 16 hours for full time employee
+            int partTimeEmployeeWorkingHour = 8;
+            int fullTimeEmployeeWorkingHour = 16;
+
+            if (employee.GetEmployeeType() == "Part time")
+            {
+                double employeeHalfDayWage = employee.GetHourlyRate() * partTimeEmployeeWorkingHour;
+                return employeeHalfDayWage;
+            }
+            double employeeFullDayWage = employee.GetHourlyRate() * fullTimeEmployeeWorkingHour;
+            return employeeFullDayWage;
+        }
 }
 

@@ -36,6 +36,13 @@ sealed class EmployeeMenu
                         Console.WriteLine($"{emp.GetName()} is {(status ? "Present" : "Absent")}");
                     }
                     break;
+                case 3:
+                    foreach(Employee emp in employeeList)
+                    {
+                        double wage = EmployeeUtility.CalculateDailyEmployeeWage(emp);
+                        Console.WriteLine($"{emp.GetName()} is a {emp.GetEmployeeType()} employee and Wage of per day is {wage} Rs.");
+                    }
+                    break;
                 case 5:
                     Console.WriteLine("Exiting.....");
                     return;
