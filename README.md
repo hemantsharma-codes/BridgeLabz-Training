@@ -546,3 +546,131 @@ Interface supports only declarations.
 Class represents state and behavior.
 Interface represents behavior only.
 
+
+
+# 📅 Day 14: Introduction of Data Structures and Linked Lists
+
+**Date:** 07 January 2026
+
+---
+
+## Introduction of Data Structures
+
+Data Structures are ways to organize and store data efficiently so that operations like access, insertion, deletion, and searching can be performed easily.
+
+---
+
+## Key Features of Data Structures in C#
+
+* Efficient data management
+* Better performance
+* Easy data organization
+* Code reusability
+
+---
+
+## Types of Data Structures in C#
+
+### Primitive Data Structures
+
+* int, float, double, char, bool
+
+### Non-Primitive Data Structures
+
+* Array
+* Linked List
+* Stack
+* Queue
+* Tree
+* Graph
+
+---
+
+## Singly Linked List
+
+A linear data structure where each node contains data and a reference to the next node.
+
+---
+
+## Doubly Linked List
+
+Each node contains data, a reference to the previous node, and a reference to the next node.
+
+---
+
+## Circular Linked List
+
+The last node points back to the first node, forming a circular structure.
+
+---
+
+✅ **Topic Covered:** Basics of Data Structures and Linked Lists
+
+
+
+# 📅 Day 15: Introduction to Stack, Queue, HashMap, and Hashing Function
+
+**Date:** 08 January 2026
+
+---
+
+## Stack
+
+A linear data structure that follows the **LIFO (Last In, First Out)** principle.
+
+Key operations: push, pop, peek.
+
+---
+
+## Queue
+
+A linear data structure that follows the **FIFO (First In, First Out)** principle.
+
+Key operations: enqueue, dequeue.
+
+---
+
+## HashMap and Hashing Function
+
+* **HashMap** stores data in key-value pairs.
+* **Hashing Function** maps keys to index values for fast data access.
+
+---
+
+✅ **Topics Covered:** Stack, Queue, HashMap, Hashing Function
+
+
+
+
+# 📅 Day 16: Introduction to Sorting Algorithms
+
+**Date:** 09 January 2026
+
+---
+
+## Bubble Sort
+
+A simple sorting algorithm that repeatedly compares and swaps adjacent elements if they are in the wrong order.
+
+---
+
+## Insertion Sort
+
+A sorting algorithm that builds the sorted list one element at a time by placing elements in their correct position.
+
+---
+
+## Merge Sort
+
+A divide-and-conquer algorithm that divides the array into halves, sorts them, and then merges them.
+
+---
+
+## Quick Sort
+
+A fast divide-and-conquer algorithm that selects a pivot element and partitions the array around it.
+
+---
+
+✅ **Topics Covered:** Bubble Sort, Insertion Sort, Merge Sort, Quick Sort
+
