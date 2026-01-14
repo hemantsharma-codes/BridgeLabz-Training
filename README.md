@@ -674,3 +674,94 @@ A fast divide-and-conquer algorithm that selects a pivot element and partitions 
 
 ✅ **Topics Covered:** Bubble Sort, Insertion Sort, Merge Sort, Quick Sort
 
+
+
+## 📅 Day 17: StreamReader, FileStream, StringBuilder, Linear Search, Binary Search
+
+Date: 12 January 2026
+
+## 🔹 StringBuilder (C#)
+
+Used to modify strings efficiently.
+
+Strings are immutable, StringBuilder is mutable.
+
+Faster for append and update operations.
+
+## 🔹 StreamReader
+
+Used to read text data from files.
+
+Reads data line by line or full file.
+
+Works at character level.
+
+## 🔹 FileStream
+
+Used for reading/writing files at byte level.
+
+Suitable for binary data.
+
+Can be combined with StreamReader.
+
+## 🔹 Linear Search
+
+Searches elements one by one.
+
+Works on unsorted data.
+
+Time Complexity: O(n)
+
+## 🔹 Binary Search
+
+Works only on sorted data.
+
+Divides data into halves.
+
+Time Complexity: O(log n)
+
+
+
+## 📅 Day 18: Introduction to Time Complexity
+
+Date: 13 January 2026
+
+## 🔹 What is Runtime Analysis?
+
+Evaluates algorithm performance based on input size.
+
+Measures efficiency instead of execution time.
+
+## 🔹 Understanding Big-O Notation
+
+Describes growth rate of an algorithm.
+
+Common notations: O(1), O(n), O(log n), O(n²).
+
+## 🔹 Time Complexity Analysis
+
+Calculates number of operations performed.
+
+Helps compare different algorithms.
+
+## 🔹 Space Complexity Analysis
+
+Measures extra memory used by an algorithm.
+
+Includes variables and data structures.
+
+## 🔹 Best, Worst, and Average Case
+
+Best Case: Minimum time required.
+
+Worst Case: Maximum time required.
+
+Average Case: Expected performance.
+
+## 🔹 Practical Guidelines for Optimizing C# Code
+
+Use efficient algorithms.
+
+Avoid unnecessary loops.
+
+Use appropriate data structures.
