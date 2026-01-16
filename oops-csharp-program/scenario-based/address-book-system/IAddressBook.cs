@@ -9,5 +9,6 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
     internal interface IAddressBook
     {
         void AddContact();
+        void EditContactByName();
     }
 }

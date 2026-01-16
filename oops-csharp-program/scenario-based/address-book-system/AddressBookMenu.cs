@@ -20,7 +20,9 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
             while (true)
             {
                 Console.WriteLine("\n1. Add Contact");
-                Console.WriteLine("2. Exit");
+                Console.WriteLine("2. Edit contact by Name");
+                Console.WriteLine("3. Diplay details");
+                Console.WriteLine("4. Exit");
 
                 Console.WriteLine("Enter your choice");
                 int choice = Convert.ToInt32(Console.ReadLine());
@@ -31,6 +33,13 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                         addressBook.AddContact();
                         break;
                     case 2:
+                        addressBook.EditContactByName();
+                        break;
+                    case 3:
+                        // Explicit cast
+                        ((AddressBook)addressBook).DisplayAllContacts();
+                        break;
+                    case 4:
                         Console.WriteLine("Exiting....");
                         return;
                 }
