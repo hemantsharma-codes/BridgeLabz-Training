@@ -70,7 +70,7 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
         // edit contact by name
         public void EditContactByName()
         {
-            Console.WriteLine("Enter the name you want to edit : ");
+            Console.WriteLine("Enter the name full name that you want to edit : ");
             string name = Console.ReadLine();
 
             string[] nameArr = name.Split(' ');
@@ -79,12 +79,13 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
             bool isChanged = false;
             foreach(Contact contact in Contacts)
             {
-                if(contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName))
+                if(contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName) && contact != null)
                 {
                     EditDetails(contact);
                     isChanged = true;
 
                     Console.WriteLine("Contact details has been edited succesfully.....");
+                    return;
                 }
             }
             if (!isChanged)
@@ -97,6 +98,12 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
         // utility methods
         public void EditDetails(Contact contact)
         {
+            // if Contact array is empty and we are trying to edit details
+            if(CurrentIdx == 0)
+            {
+                Console.WriteLine("Address book is empty...");
+                return;
+            }
             while (true)
             {
                 Console.WriteLine("\n1. Edit first name");
@@ -165,6 +172,14 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
         public void DisplayAllContacts()
         {
             Console.WriteLine("====Details of all Contacts==========");
+
+            // if address book is empty and we are trying to display details
+            if(CurrentIdx == 0)
+            {
+                Console.WriteLine("Address book is empty....");
+                return;
+            }
+
             for(int i = 0; i < CurrentIdx; i++)
             {
                 Contact contact = Contacts[i];
@@ -172,6 +187,45 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                     $" Address : {contact.GetAddress()}, City : {contact.GetCity()}, State : {contact.GetState()}," +
                     $" ZipCode : {contact.GetZipCode()}, PhoneNumber : {contact.GetPhoneNumber()}, EmailId : {contact.GetEmailId()}");
             }
+        }
+
+        // delete contact by person name
+        public void DeleteContact()
+        {
+            Console.WriteLine("Enter the person name for whom you want to delete contact");
+            string personName = Console.ReadLine();
+
+            string[] personArr = personName.Split(' ');
+            string firstName = personArr[0].ToLower();
+            string lastName = personArr[1].ToLower();
+
+            // if person is present on last idx of Contact array
+            Contact contact = Contacts[CurrentIdx - 1];
+            if(contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName))
+            {
+                Contacts[CurrentIdx - 1] = null;
+                CurrentIdx--;
+                Console.WriteLine("The Person has been removed from the address book...");
+                return;
+            }
+
+            int personIdx = 0;
+            for(int i=0;i<CurrentIdx;i++)
+            {
+                contact = Contacts[i];
+                if(contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName))
+                {
+                    personIdx = i;
+                    break;
+                }
+            }
+            for(int i = personIdx; i < CurrentIdx - 1; i++)
+            {
+                Contacts[i] = Contacts[i + 1];
+            }
+            Contacts[CurrentIdx - 1] = null;
+            CurrentIdx--;
+            Console.WriteLine("The Person has been removed from the address book...");
         }
     }
 }
