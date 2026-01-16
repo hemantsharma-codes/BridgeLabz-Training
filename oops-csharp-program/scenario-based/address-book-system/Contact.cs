@@ -96,5 +96,18 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
         {
             this.EmailId = emailId;
         }
+
+
+        // ToString() method overriden
+        public override string ToString()
+        {
+            return "Name: " + FirstName + " " + LastName +
+                   "\nAddress: " + Address +
+                   "\nCity: " + City +
+                   "\nState: " + State +
+                   "\nZip: " + ZipCode +
+                   "\nPhone: " + PhoneNumber +
+                   "\nEmail: " + EmailId;
+        }
     }
 }
