@@ -39,6 +39,14 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
             Console.WriteLine("Enter Last Name:");
             string lastName = Console.ReadLine();
 
+            bool isPresent = CheckDuplicate(firstName.ToLower(), lastName.ToLower());
+
+            if (isPresent)
+            {
+                Console.WriteLine(firstName+" "+lastName+" is already present in address book.");
+                return;
+            }
+
             Console.WriteLine("Enter Address:");
             string address = Console.ReadLine();
 
@@ -73,6 +81,20 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                     Console.WriteLine("Contact Added Successfully!");
                 }
             }
+        }
+
+        // check contact duplication every time when you are adding new contact
+        private bool CheckDuplicate(string firstName,string lastName)
+        {
+            for(int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if(contact != null && contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         // edit contact by name
