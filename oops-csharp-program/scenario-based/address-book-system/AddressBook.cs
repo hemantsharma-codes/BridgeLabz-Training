@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
@@ -10,21 +11,28 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
     internal class AddressBook : IAddressBook
     {
         // declaration of array of Contact to store the all contact
+        private string name;
         private readonly Contact[] Contacts;
         private readonly int MaxSizeContacts;
         private int CurrentIdx;
 
         // constructor
-        public AddressBook(int maxSize)
+        public AddressBook(string name,int maxSize)
         {
+            this.name = name;
             MaxSizeContacts = maxSize;
             Contacts = new Contact[MaxSizeContacts];
             CurrentIdx = 0;
         }
 
-
-        public void AddContact()
+        public string GetName()
         {
+            return this.name;
+        }
+
+        // add new contact
+        public void AddContact()
+        {  
             Console.WriteLine("Enter First Name:");
             string firstName = Console.ReadLine();
 
@@ -74,12 +82,18 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
             string name = Console.ReadLine();
 
             string[] nameArr = name.Split(' ');
+            if(nameArr.Length < 2)
+            {
+                Console.WriteLine("Please enter both first and last name.");
+                return;
+            }
+
             string firstName = nameArr[0].ToLower();
             string lastName = nameArr[1].ToLower();
             bool isChanged = false;
             foreach(Contact contact in Contacts)
             {
-                if(contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName) && contact != null)
+                if(contact != null && contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName))
                 {
                     EditDetails(contact);
                     isChanged = true;
@@ -169,26 +183,6 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
             }
         }
 
-        public void DisplayAllContacts()
-        {
-            Console.WriteLine("====Details of all Contacts==========");
-
-            // if address book is empty and we are trying to display details
-            if(CurrentIdx == 0)
-            {
-                Console.WriteLine("Address book is empty....");
-                return;
-            }
-
-            for(int i = 0; i < CurrentIdx; i++)
-            {
-                Contact contact = Contacts[i];
-                Console.WriteLine($"\nFirst Name : {contact.GetFirstName()}, Last Name : {contact.GetLastName()}," +
-                    $" Address : {contact.GetAddress()}, City : {contact.GetCity()}, State : {contact.GetState()}," +
-                    $" ZipCode : {contact.GetZipCode()}, PhoneNumber : {contact.GetPhoneNumber()}, EmailId : {contact.GetEmailId()}");
-            }
-        }
-
         // delete contact by person name
         public void DeleteContact()
         {
@@ -196,36 +190,69 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
             string personName = Console.ReadLine();
 
             string[] personArr = personName.Split(' ');
-            string firstName = personArr[0].ToLower();
-            string lastName = personArr[1].ToLower();
-
-            // if person is present on last idx of Contact array
-            Contact contact = Contacts[CurrentIdx - 1];
-            if(contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName))
+            if (personArr.Length < 2)
             {
-                Contacts[CurrentIdx - 1] = null;
-                CurrentIdx--;
-                Console.WriteLine("The Person has been removed from the address book...");
+                Console.WriteLine("Please enter both first and last name.");
                 return;
             }
 
-            int personIdx = 0;
-            for(int i=0;i<CurrentIdx;i++)
+            string firstName = personArr[0].ToLower();
+            string lastName = personArr[1].ToLower();
+
+            if (CurrentIdx == 0)
             {
-                contact = Contacts[i];
-                if(contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName))
+                Console.WriteLine("Address Book is empty.");
+                return;
+            }
+
+            int personIdx = -1;
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if (contact != null && contact.GetFirstName().ToLower().Equals(firstName) && contact.GetLastName().ToLower().Equals(lastName))
                 {
                     personIdx = i;
                     break;
                 }
             }
-            for(int i = personIdx; i < CurrentIdx - 1; i++)
+
+            if (personIdx == -1)
+            {
+                Console.WriteLine($"Contact '{firstName} {lastName}' not found.");
+                return;
+            }
+
+            // Shift contacts to remove the deleted one
+            for (int i = personIdx; i < CurrentIdx - 1; i++)
             {
                 Contacts[i] = Contacts[i + 1];
             }
-            Contacts[CurrentIdx - 1] = null;
+            Contacts[CurrentIdx - 1] = null; // clear last duplicate
             CurrentIdx--;
-            Console.WriteLine("The Person has been removed from the address book...");
+
+            Console.WriteLine($"Contact '{firstName} {lastName}' has been removed from the address book.");
+        }
+
+        // helper logic for displaying address book
+        public void DisplayAllContacts()
+        {
+            Console.WriteLine("\n====Details of all Contacts==========\n");
+
+            // if address book is empty and we are trying to display details
+            if (CurrentIdx == 0)
+            {
+                Console.WriteLine("Address book is empty....");
+                return;
+            }
+
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if(contact != null)
+                {
+                    Console.WriteLine(contact);
+                }
+            }
         }
     }
 }

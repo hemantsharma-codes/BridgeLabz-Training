@@ -5,27 +5,79 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
+using System;
 namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
 {
     sealed class AddressBookMenu
     {
-        private IAddressBook addressBook;
+        private IAddressBookSystem addressBookSystem;
+
         public void Choice()
         {
             Console.WriteLine("==========Address Book System============");
 
-            Console.WriteLine("Enter the maximum size of the Contact list : ");
+            // Initialize AddressBookSystem via interface
+            Console.WriteLine("Enter the maximum size of the Address Book System : ");
             int maxSize = Convert.ToInt32(Console.ReadLine());
-            addressBook = new AddressBook(maxSize);
+            addressBookSystem = new AddressBookSystem(maxSize);
+
             while (true)
             {
-                Console.WriteLine("\n1. Add Contact");
-                Console.WriteLine("2. Edit contact by Name");
-                Console.WriteLine("3. Delete Contact by Name");
-                Console.WriteLine("4. Diplay details");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("\n1. Add New Address Book");
+                Console.WriteLine("2. Open Existing Address Book");
+                Console.WriteLine("3. Display all Address Book");
+                Console.WriteLine("0. Exit");
 
-                Console.WriteLine("Enter your choice");
+                Console.WriteLine("Enter your choice:");
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        // Add a new address book
+                        addressBookSystem.AddAddressBook();
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Enter the name of address book");
+                        string name = Console.ReadLine();
+                        IAddressBook addressBook = addressBookSystem.GetAddressBook(name);
+
+                        if (addressBook != null)
+                        {
+                            HandleAddressBook(addressBook);
+                        }
+                        else
+                        {
+                            Console.WriteLine(name + " is not present in address book system");
+                        }
+                        break;
+                    case 3:
+                        addressBookSystem.DisplayAllAddressBook();
+                        break;
+                    case 0:
+                        Console.WriteLine("Exiting....");
+                        return;
+                    default:
+                        Console.WriteLine("Please enter the valid choice...");
+                        break;
+                }
+
+                  
+            }
+        }
+
+        public void HandleAddressBook(IAddressBook addressBook)
+        {
+
+            while (true)
+            {
+                Console.WriteLine("\n1. Add New Contact");
+                Console.WriteLine("2. Edit Contact");
+                Console.WriteLine("3. Delete Contact");
+                Console.WriteLine("0. Exit");
+
+                Console.WriteLine("Enter your choice..");
                 int choice = Convert.ToInt32(Console.ReadLine());
 
                 switch (choice)
@@ -39,15 +91,16 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                     case 3:
                         addressBook.DeleteContact();
                         break;
-                    case 4:
-                        // Explicit cast
-                        ((AddressBook)addressBook).DisplayAllContacts();
-                        break;
-                    case 5:
-                        Console.WriteLine("Exiting....");
+                    case 0:
+                        Console.WriteLine("Exiting..");
                         return;
+                    default:
+                        Console.WriteLine("Please enter valid choice..");
+                        break;
                 }
             }
         }
+
     }
 }
+
