@@ -1,0 +1,17 @@
+using System;
+using System.Text.RegularExpressions;
+class ExtractEmails
+{
+    static void Main()
+    {
+        string text = "Contact us at support@example.com and info@company.org";
+
+        string pattern = @"[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]{2,}";
+
+        MatchCollection matches = Regex.Matches(text, pattern);
+
+        foreach (Match match in matches)
+            Console.WriteLine(match.Value);
+    }
+}
+
