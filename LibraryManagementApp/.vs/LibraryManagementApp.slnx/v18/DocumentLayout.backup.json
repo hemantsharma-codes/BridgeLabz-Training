@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|c:\\users\\golub\\desktop\\visual studio project\\review\\librarymanagementapp\\librarymanagementapp\\librarymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|solutionrelative:librarymanagementapp\\librarymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|c:\\users\\golub\\desktop\\visual studio project\\review\\librarymanagementapp\\librarymanagementapp\\libraryutilityimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|solutionrelative:librarymanagementapp\\libraryutilityimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|c:\\users\\golub\\desktop\\visual studio project\\review\\librarymanagementapp\\librarymanagementapp\\librarymain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|solutionrelative:librarymanagementapp\\librarymain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|c:\\users\\golub\\desktop\\visual studio project\\review\\librarymanagementapp\\librarymanagementapp\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|solutionrelative:librarymanagementapp\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|c:\\users\\golub\\desktop\\visual studio project\\review\\librarymanagementapp\\librarymanagementapp\\ilibraryoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6839A4D4-5E0A-483D-AED0-2D5AFE96E879}|LibraryManagementApp\\LibraryManagementApp.csproj|solutionrelative:librarymanagementapp\\ilibraryoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LibraryMenu.cs",
+              "DocumentMoniker": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\LibraryMenu.cs",
+              "RelativeDocumentMoniker": "LibraryManagementApp\\LibraryMenu.cs",
+              "ToolTip": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\LibraryMenu.cs",
+              "RelativeToolTip": "LibraryManagementApp\\LibraryMenu.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T06:25:46.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LibraryUtilityImpl.cs",
+              "DocumentMoniker": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\LibraryUtilityImpl.cs",
+              "RelativeDocumentMoniker": "LibraryManagementApp\\LibraryUtilityImpl.cs",
+              "ToolTip": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\LibraryUtilityImpl.cs",
+              "RelativeToolTip": "LibraryManagementApp\\LibraryUtilityImpl.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAiwC4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T06:04:44.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ILibraryOperation.cs",
+              "DocumentMoniker": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\ILibraryOperation.cs",
+              "RelativeDocumentMoniker": "LibraryManagementApp\\ILibraryOperation.cs",
+              "ToolTip": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\ILibraryOperation.cs",
+              "RelativeToolTip": "LibraryManagementApp\\ILibraryOperation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T06:02:43.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\Book.cs",
+              "RelativeDocumentMoniker": "LibraryManagementApp\\Book.cs",
+              "ToolTip": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\Book.cs",
+              "RelativeToolTip": "LibraryManagementApp\\Book.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T05:56:54.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LibraryMain.cs",
+              "DocumentMoniker": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\LibraryMain.cs",
+              "RelativeDocumentMoniker": "LibraryManagementApp\\LibraryMain.cs",
+              "ToolTip": "C:\\Users\\golub\\Desktop\\visual studio project\\Review\\LibraryManagementApp\\LibraryManagementApp\\LibraryMain.cs",
+              "RelativeToolTip": "LibraryManagementApp\\LibraryMain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T05:47:31.491Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
