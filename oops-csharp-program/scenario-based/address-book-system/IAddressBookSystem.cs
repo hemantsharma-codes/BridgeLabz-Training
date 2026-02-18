@@ -11,5 +11,8 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
         IAddressBook GetAddressBook(string name);
         void AddAddressBook();
         void DisplayAllAddressBook();
+        void SearchPersonByCityOrState();
+        void ViewPersonInACityOrState();
+
     }
 }

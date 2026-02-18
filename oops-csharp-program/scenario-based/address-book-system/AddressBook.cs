@@ -276,5 +276,33 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                 }
             }
         }
+
+        // view contact by city name
+        public void ViewContactByCity(string cityName)
+        { 
+            for(int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if (contact.GetCity().Equals(cityName, StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("\n"+contact);
+                }
+            }
+        }
+
+        // view contact by state name
+        public void ViewContactByState(string stateName)
+        {
+
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if (contact.GetState().Equals(stateName, StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("\n"+contact);
+                }
+            }
+        }
+
     }
 }

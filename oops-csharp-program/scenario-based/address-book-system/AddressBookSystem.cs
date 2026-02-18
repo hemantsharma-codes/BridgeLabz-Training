@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,8 +76,61 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
 
                 if(addressBook != null)
                 {
-                    Console.WriteLine("==========="+addressBook.GetName()+"==========");
+                    Console.WriteLine("\n==========="+addressBook.GetName()+"==========");
                     addressBook.DisplayAllContacts();
+                }
+            }
+        }
+
+        // abiltiy to view person in a city or state across the multiple address book
+        public void ViewPersonInACityOrState()
+        {
+            Console.WriteLine("1. View by City");
+            Console.WriteLine("2. View by State");
+
+            Console.Write("Enter your choice : ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            
+            switch (choice)
+            {
+                case 1:
+                    ViewByCityName();
+                    break;
+                case 2:
+                    ViewByStateName();
+                    break;
+                default:
+                    Console.WriteLine("Please enter valid choice");
+                    break;
+            }
+        }
+        private void ViewByCityName()
+        {
+            Console.WriteLine("Enter the full name of city");
+            string cityName = Console.ReadLine();
+
+            for(int i = 0; i < CurrentIdx; i++)
+            {
+                AddressBook addressBook = AddressBooks[i];
+                if(addressBook != null)
+                {
+                    addressBook.ViewContactByCity(cityName);
+                }
+            }
+        }
+
+        private void ViewByStateName()
+        {
+            Console.WriteLine("Enter the full name of state");
+            string stateName = Console.ReadLine();
+
+            for(int i = 0; i < CurrentIdx; i++)
+            {
+                AddressBook addressBook = AddressBooks[i];
+                if(addressBook != null)
+                {
+                    addressBook.ViewContactByState(stateName);
+
                 }
             }
         }

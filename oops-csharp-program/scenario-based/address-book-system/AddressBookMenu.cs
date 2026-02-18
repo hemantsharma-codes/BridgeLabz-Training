@@ -25,7 +25,9 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
             {
                 Console.WriteLine("\n1. Add New Address Book");
                 Console.WriteLine("2. Open Existing Address Book");
-                Console.WriteLine("3. Display all Address Book");
+                Console.WriteLine("3. Search Person by a city or state");
+                Console.WriteLine("4. View Persons by city or state");
+                Console.WriteLine("5. Display all Address Book");
                 Console.WriteLine("0. Exit");
 
                 Console.WriteLine("Enter your choice:");
@@ -37,10 +39,9 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                         // Add a new address book
                         addressBookSystem.AddAddressBook();
                         break;
-
                     case 2:
                         Console.WriteLine("Enter the name of address book");
-                        string name = Console.ReadLine();
+                        string name = Console.ReadLine().ToLower();
                         IAddressBook addressBook = addressBookSystem.GetAddressBook(name);
 
                         if (addressBook != null)
@@ -53,6 +54,13 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                         }
                         break;
                     case 3:
+                        addressBookSystem.SearchPersonByCityOrState();
+                        break;
+
+                    case 4:
+                        addressBookSystem.ViewPersonInACityOrState();
+                        break;
+                    case 5:
                         addressBookSystem.DisplayAllAddressBook();
                         break;
                     case 0:
