@@ -13,6 +13,7 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
         void DisplayAllAddressBook();
         void SearchPersonByCityOrState();
         void ViewPersonInACityOrState();
+        void CountPersonByCityOrState();
 
     }
 }

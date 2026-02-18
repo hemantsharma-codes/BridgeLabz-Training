@@ -27,7 +27,8 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                 Console.WriteLine("2. Open Existing Address Book");
                 Console.WriteLine("3. Search Person by a city or state");
                 Console.WriteLine("4. View Persons by city or state");
-                Console.WriteLine("5. Display all Address Book");
+                Console.WriteLine("5. Get number of contact i.e. count by city or state");
+                Console.WriteLine("6. Display all Address Book");
                 Console.WriteLine("0. Exit");
 
                 Console.WriteLine("Enter your choice:");
@@ -61,6 +62,9 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                         addressBookSystem.ViewPersonInACityOrState();
                         break;
                     case 5:
+                        addressBookSystem.CountPersonByCityOrState();
+                        break;
+                    case 6:
                         addressBookSystem.DisplayAllAddressBook();
                         break;
                     case 0:

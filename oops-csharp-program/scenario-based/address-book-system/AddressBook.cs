@@ -303,6 +303,77 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                 }
             }
         }
+        // search person by name and city
+        public bool SearchPersonByCity(string firstName, string lastName, string city)
+        {
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if (contact != null &&
+                    contact.GetFirstName().Equals(firstName, StringComparison.OrdinalIgnoreCase) &&
+                    contact.GetLastName().Equals(lastName, StringComparison.OrdinalIgnoreCase) &&
+                    contact.GetCity().Equals(city, StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("\nFound in Address Book: " + name);
+                    Console.WriteLine(contact);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // search person by name and state
+        public bool SearchPersonByState(string firstName, string lastName, string state)
+        {
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if (contact != null &&
+                    contact.GetFirstName().Equals(firstName, StringComparison.OrdinalIgnoreCase) &&
+                    contact.GetLastName().Equals(lastName, StringComparison.OrdinalIgnoreCase) &&
+                    contact.GetState().Equals(state, StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("\nFound in Address Book: " + name);
+                    Console.WriteLine(contact);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // count contacts by city
+        public int CountByCity(string cityName)
+        {
+            int count = 0;
+
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if (contact != null &&
+                    contact.GetCity().Equals(cityName, StringComparison.OrdinalIgnoreCase))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // count contacts by state
+        public int CountByState(string stateName)
+        {
+            int count = 0;
+
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                Contact contact = Contacts[i];
+                if (contact != null &&
+                    contact.GetState().Equals(stateName, StringComparison.OrdinalIgnoreCase))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
 
     }
 }

@@ -134,5 +134,97 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                 }
             }
         }
+
+        // Serach Person by city or state
+        public void SearchPersonByCityOrState()
+        {
+            Console.WriteLine("Enter full name (FirstName LastName): ");
+            string fullName = Console.ReadLine();
+
+            string[] nameArr = fullName.Split(' ');
+            if (nameArr.Length < 2)
+            {
+                Console.WriteLine("Please enter both first and last name.");
+                return;
+            }
+
+            string firstName = nameArr[0];
+            string lastName = nameArr[1];
+
+            Console.WriteLine("1. Search by City");
+            Console.WriteLine("2. Search by State");
+            Console.Write("Enter your choice: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter City/State name:");
+            string location = Console.ReadLine();
+
+            bool isFound = false;
+
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                AddressBook addressBook = AddressBooks[i];
+                if (addressBook == null) continue;
+
+                if (choice == 1)
+                {
+                    if (addressBook.SearchPersonByCity(firstName, lastName, location))
+                        isFound = true;
+                }
+                else if (choice == 2)
+                {
+                    if (addressBook.SearchPersonByState(firstName, lastName, location))
+                        isFound = true;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice");
+                    return;
+                }
+            }
+
+            if (!isFound)
+            {
+                Console.WriteLine("Person not found in any address book.");
+            }
+        }
+
+        // Ability to get number of contact persons by city or state
+        public void CountPersonByCityOrState()
+        {
+            Console.WriteLine("1. Count by City");
+            Console.WriteLine("2. Count by State");
+            Console.Write("Enter your choice: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter City/State name:");
+            string name = Console.ReadLine();
+
+            int totalCount = 0;
+
+            for (int i = 0; i < CurrentIdx; i++)
+            {
+                AddressBook addressBook = AddressBooks[i];
+                if (addressBook == null) continue;
+
+                if (choice == 1)
+                {
+                    totalCount += addressBook.CountByCity(name);
+                }
+                else if (choice == 2)
+                {
+                    totalCount += addressBook.CountByState(name);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice");
+                    return;
+                }
+            }
+
+            Console.WriteLine("\nTotal number of contacts : " + totalCount);
+        }
+
+
     }
 }
