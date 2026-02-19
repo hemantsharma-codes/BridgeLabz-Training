@@ -254,6 +254,40 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
 
             Console.WriteLine($"Contact '{firstName} {lastName}' has been removed from the address book.");
         }
+        // Sort AddressBook by name
+        public void SortContactsByName()
+        {
+            if (CurrentIdx == 0)
+            {
+                Console.WriteLine("Address book is empty, nothing to sort.");
+                return;
+            }
+
+            for (int i = 0; i < CurrentIdx - 1; i++)
+            {
+                for (int j = 0; j < CurrentIdx - i - 1; j++)
+                {
+                    Contact c1 = Contacts[j];
+                    Contact c2 = Contacts[j + 1];
+
+                    if (c1 == null || c2 == null) continue;
+
+                    string name1 = c1.GetFirstName() + " " + c1.GetLastName();
+                    string name2 = c2.GetFirstName() + " " + c2.GetLastName();
+
+                    // Compare alphabetically manually
+                    if (string.Compare(name1, name2, StringComparison.OrdinalIgnoreCase) > 0)
+                    {
+                        // Swap
+                        Contacts[j] = c2;
+                        Contacts[j + 1] = c1;
+                    }
+                }
+            }
+
+            Console.WriteLine("Contacts sorted alphabetically by name.");
+        }
+
 
         // helper logic for displaying address book
         public void DisplayAllContacts()
@@ -272,7 +306,11 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                 Contact contact = Contacts[i];
                 if(contact != null)
                 {
-                    Console.WriteLine(contact);
+                    Console.WriteLine("\n"+contact);
+                }
+                if(i == CurrentIdx - 1)
+                {
+                    Console.WriteLine("-----------------------------------------------------------\n");
                 }
             }
         }

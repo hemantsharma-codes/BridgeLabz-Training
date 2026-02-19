@@ -80,6 +80,7 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                     addressBook.DisplayAllContacts();
                 }
             }
+            Console.WriteLine();
         }
 
         // abiltiy to view person in a city or state across the multiple address book

@@ -87,6 +87,7 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                 Console.WriteLine("\n1. Add New Contact");
                 Console.WriteLine("2. Edit Contact");
                 Console.WriteLine("3. Delete Contact");
+                Console.WriteLine("4. Sort Contact by Name");
                 Console.WriteLine("0. Exit");
 
                 Console.WriteLine("Enter your choice..");
@@ -102,6 +103,9 @@ namespace BridgeLabzCopy.oops_csharp_practice.scenario_based.AddressBookSystem
                         break;
                     case 3:
                         addressBook.DeleteContact();
+                        break;
+                    case 4:
+                        addressBook.SortContactsByName();
                         break;
                     case 0:
                         Console.WriteLine("Exiting..");
