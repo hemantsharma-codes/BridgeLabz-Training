@@ -765,3 +765,489 @@ Use efficient algorithms.
 Avoid unnecessary loops.
 
 Use appropriate data structures.
+---
+
+# 📅 Day 19 — Address Book & Browser History Systems
+
+**Date:** 15/01/2026
+**Topic:** OOP with Arrays & Linked Data Structures
+
+---
+
+## 🧩 Key Learnings
+
+### 📒 Address Book System
+- Developed an address book application using **Object-Oriented Programming (OOP)** concepts.
+- Utilized **arrays** to store and manage contact details efficiently.
+- Designed the system to allow easy addition, deletion, and searching of contacts.
+
+### 👥 Handling Multiple Address Books
+- Implemented **separate address books** for **Personal**, **Office**, and **Family** contacts.
+- Enabled smooth navigation between different address books while keeping data organized.
+
+### 🗂️ Array-Based Contact Storage
+- Used arrays as the core data structure for storing contacts.
+- Learned techniques for efficiently adding, removing, and updating contact information in arrays.
+
+### 🌐 BrowserBuddy – Tab & History Manager
+- Built a **browser tab history system** to track user navigation.
+- Implemented a **Doubly Linked List** for back/forward tab navigation.
+- Used a **Stack** to restore recently closed tabs quickly.
+- Focused on providing smooth and responsive tab operations for an enhanced user experience.
+
+---
+
+# 📅 Day 20 — Sorting Algorithms in Real-World Scenarios
+
+**Date:** 17/01/2026  
+**Topic:** Quick Sort & Bubble Sort Applications
+
+---
+
+## 🧩 Key Learnings
+
+### 🛒 FlashDealz – Product Sorting by Discounts (Quick Sort)
+- Implemented **Quick Sort** to arrange a large list of products according to their discount percentages.  
+- Focused on achieving **fast average-case performance** and optimizing the sorting for large datasets.  
+- Learned how divide-and-conquer strategies can improve efficiency in real-world product listing applications.  
+
+### 🏃 FitnessTracker – Ranking Daily Step Counts (Bubble Sort)
+- Used **Bubble Sort** to organize users’ daily step counts in a smaller dataset.  
+- Managed frequent updates and **real-time reordering** efficiently despite the simplicity of the algorithm.  
+- Gained insight into scenarios where simpler algorithms like Bubble Sort are sufficient and easy to implement.  
+
+---
+
+# 📅 Day 21 — Introduction to Generics in C#
+
+**Date:** 19/01/2026  
+**Topic:** Generics in C#
+
+---
+
+## 🧩 Key Learnings
+
+### 🧬 Generics in C#
+- Explored **generics** in C# to create **flexible, reusable, and type-safe code**.  
+- Learned about **type parameters**, **generic classes**, and **generic methods**.  
+- Understood how generics help **reduce code duplication** and allow methods and classes to handle multiple data types efficiently.  
+
+---
+
+# 📅 Day 22 — DSA Scenario Questions & Collections Framework
+
+**Date:** 20/01/2026
+**Topic:** Advanced Sorting, Backtracking & Collections in C#
+
+---
+
+## 🧩 Key Learnings
+
+### 🆔 Sorting Aadhar Numbers (Radix Sort)
+- Applied **Radix Sort** to efficiently arrange 12-digit Aadhar numbers.
+- Performed **binary search** after sorting to quickly locate specific entries.
+- Maintained relative order for numbers sharing the same prefix, ensuring **stability** in sorting.
+
+### 🔐 Password Cracker Simulator (Backtracking)
+- Implemented a **backtracking algorithm** to generate all possible password combinations.
+- Stopped the generation once the correct password was found.
+- Analyzed **time and space complexity** to understand the efficiency of backtracking in search problems.
+
+### 📚 Collections Framework
+- Studied the **Collections Framework** in C#, including its structure and hierarchy.
+- Explored **List, Set, Queue/Deque, and Map** interfaces and their common implementations.
+- Compared different collection types and learned **real-world scenarios** where each is most effective.
+
+---
+
+# 📅 Day 23 — Scenario-Based & I/O Streams
+
+**Date:** 21/01/2026
+**Topic:** C# I/O Streams
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Types of Streams in C#
+C# provides various streams to handle data input and output efficiently. Here are the main types:
+
+1. **File Streams**
+   - Used to read from or write to files on disk.
+   - Implemented using the `FileStream` class.
+   - Supports both **synchronous** and **asynchronous** file operations.
+
+2. **Object Streams**
+   - Allow serialization and deserialization of objects.
+   - Use `BinaryFormatter` or `System.Text.Json`/`XmlSerializer` to convert objects to streams and vice versa.
+   - Useful for saving object state or sending objects over a network.
+
+3. **ByteArray Streams**
+   - Operate on byte arrays stored in memory instead of files.
+   - Implemented using `MemoryStream`.
+   - Useful for temporary storage, testing, or data transformations.
+
+4. **Buffered Streams**
+   - Wrap another stream to improve read/write performance by reducing I/O operations.
+   - Implemented using `BufferedStream`.
+   - Efficient when working with large files or slow I/O devices.
+
+5. **Reader and Writer Streams**
+   - Used for character-based I/O (text files) rather than byte-based.
+   - Classes include `StreamReader` and `StreamWriter`.
+   - Simplify reading/writing text and handle encoding automatically.
+
+---
+
+### ⚡ Key Considerations & Best Practices
+- Always **close streams** or use `using` statements to release resources automatically.
+- Prefer **BufferedStreams** for large files to reduce I/O overhead.
+- Use **try-catch blocks** to handle exceptions such as `IOException` or `FileNotFoundException`.
+- For object serialization, ensure **version compatibility** between serialized objects and the code that reads them.
+- Avoid blocking the main thread by using **asynchronous I/O** when handling large data or network operations.
+
+---
+
+# 📅 Day 24 — Scenario-Based & Exception Handling
+
+**Date:** 22/01/2026  
+**Topic:** Exceptions in C#
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Types of Exceptions
+- **Checked Exceptions:**  
+  - C# does not enforce checked exceptions like Java, but these represent errors you can anticipate and handle (e.g., `FileNotFoundException`).  
+- **Unchecked Exceptions:**  
+  - Exceptions that occur at runtime and are generally caused by logical errors (e.g., `NullReferenceException`, `DivideByZeroException`).  
+- **Custom Exceptions:**  
+  - User-defined exceptions extending the `Exception` class to handle application-specific error scenarios.
+
+### 🔹 Handling Exceptions
+- **try-catch blocks:**  
+  - Wrap risky code inside a `try` block and handle exceptions in a `catch` block.  
+- **try-catch-finally blocks:**  
+  - `finally` executes regardless of whether an exception occurred, typically used for resource cleanup.  
+- **throw statement:**  
+  - Used to raise an exception explicitly.  
+- **throws clause:**  
+  - In C#, `throws` keyword is not used; methods can throw exceptions implicitly.  
+
+### 🔹 Creating Custom Exceptions
+- Extend the **`Exception` class** to define application-specific exceptions.  
+- Implement **constructors** to allow message passing and inner exception chaining:  
+---
+
+# 📅 Day 25 — Regex & MSTest
+
+**Date:** 23/01/2026
+**Topic:** Testing & Regular Expressions in C#
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Regular Expressions (Regex) in C#
+- **Regex** allows pattern-based searching, matching, and validation of strings.
+- In C#, use the `System.Text.RegularExpressions.Regex` class.
+- Common uses include validating emails, phone numbers, or extracting specific patterns from text.
+
+---
+
+# 📅 Day 26 — Attributes, Reflection & Testing Basics
+
+**Date:** 27/01/2026  
+**Topic:** Annotation-Driven Systems & Unit Testing in C#
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Attributes in C#
+- Attributes provide **metadata** for classes, methods, and properties.  
+- Used for **declarative programming** to influence runtime behavior or tooling.  
+- Examples include marking methods as obsolete or classes as serializable.
+
+### 🔹 Reflection
+- Reflection allows **runtime inspection** of types, members, and attributes.  
+- Useful for dynamic object creation, reading metadata, and accessing methods or properties without compile-time knowledge.
+
+### 🔹 Unit Testing Basics
+- Unit testing ensures **individual components or methods** work correctly.  
+- C# frameworks like MSTest, NUnit, and xUnit are used.  
+- Focus on writing **isolated, repeatable, and meaningful** tests to maintain code quality.
+
+### ⚡ Best Practices
+- Apply attributes to **reduce boilerplate and simplify configuration**.  
+- Use reflection carefully to **avoid performance overhead**.  
+- Keep tests concise and focused on **specific functionalities**.
+
+---
+
+
+# 📅 Day 27 — CSV Data Handling
+
+**Date:** 28/01/2026
+**Topic:** Introduction to CSV
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Reading CSV Files
+- Learned techniques to **read and extract data** from CSV files efficiently.
+- Focused on handling large datasets and various delimiters.
+
+### 🔹 Writing CSV Files
+- Explored methods to **create and write data** into CSV files.
+- Ensured proper formatting and consistent structure for future processing.
+
+### 🔹 Parsing CSV Data
+- Learned how to **interpret and transform CSV content** into usable data structures.
+- Handled common challenges like missing fields or inconsistent data types.
+
+### 🔹 Data Validation
+- Applied validation checks to ensure CSV data **meets required criteria**.
+- Checked for **format correctness, duplicates, and data integrity** before processing.
+
+---
+
+
+# 📅 Day 28 — JSON Data
+
+**Date:** 29/01/2026
+**Topic:** Introduction to JSON
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Reading JSON Data
+- Learned methods to **read and extract information** from JSON files.
+- Focused on handling nested structures and arrays efficiently.
+
+### 🔹 Writing JSON Data
+- Explored how to **create and serialize data** into JSON format.
+- Ensured proper structure for compatibility with other systems and APIs.
+
+### 🔹 Parsing JSON Data
+- Learned how to **convert JSON content into usable objects** in C#.
+- Handled challenges like missing fields or variable data types.
+
+### 🔹 JSON Schema Validation
+- Applied **schema validation** to ensure JSON data meets expected structure and rules.
+- Ensured **data integrity and consistency** before processing or storage.
+
+---
+
+# 📅 Day 29 — Design Principles
+
+**Date:** 02/02/2026
+**Topic:** OOP Design Principles
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 SOLID Principles
+- Learned the five key principles (**Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion**) for creating **maintainable and scalable OOP designs**.
+
+### 🔹 KISS (Keep It Simple, Stupid)
+- Emphasized designing **simple and easy-to-understand code**, avoiding unnecessary complexity.
+
+### 🔹 DRY (Don't Repeat Yourself)
+- Focused on **reducing code duplication** by reusing functions, methods, and classes wherever possible.
+
+### 🔹 DIY (Do It Yourself)
+- Encouraged **hands-on practice** and experimenting with design implementations to strengthen understanding of OOP principles.
+
+---
+
+# 📅 Day 30 — Design Patterns
+
+**Date:** 03/02/2026
+**Topic:** OOP Design Patterns
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Design Patterns
+- Studied **reusable solutions** to common software design problems in OOP.
+- Learned the importance of **structured approaches** for maintainable, scalable, and flexible code.
+- Covered major categories:
+  - **Creational Patterns:** Focus on object creation (e.g., Singleton, Factory).
+  - **Structural Patterns:** Manage relationships between classes (e.g., Adapter, Decorator).
+  - **Behavioral Patterns:** Handle communication and responsibility between objects (e.g., Observer, Strategy).
+- Emphasized **applying patterns thoughtfully** to improve code quality without overcomplicating designs.
+
+---
+
+# 📅 Day 31 — Introduction to Multithreading & Scenario-Based Problems
+
+**Date:** 04/02/2026  
+**Topic:** Introduction to Multithreading
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Multithreading in C#
+- Learned the concept of **multithreading** to run multiple tasks concurrently.  
+- Explored the benefits of **improved performance and responsiveness** in applications.  
+- Understood key components:
+  - **Thread creation and management**  
+  - **Thread synchronization** to avoid conflicts and ensure data consistency  
+  - **Scenario-based problem solving** using multiple threads for practical applications  
+
+### ⚡ Best Practices
+- Always handle **thread safety** when sharing resources between threads.  
+- Use **locks or synchronization primitives** to prevent race conditions.  
+- Avoid unnecessary thread creation to reduce overhead and improve efficiency.  
+
+---
+# 📅 Day 32 — Introduction to Threads in Multithreading
+
+**Date:** 05/02/2026
+**Topic:** Threads in C# – Types, Creation, and Methods
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Threads in C#
+- **Threads** are independent paths of execution within a program.
+- Used to **perform multiple operations concurrently**, improving performance and responsiveness.
+
+### 🔹 Types of Threads
+- **Foreground Threads:** Keep the application running until they complete.
+- **Background Threads:** Automatically stop when all foreground threads finish execution.
+
+### 🔹 Creating Threads
+- Threads can be created using the **`Thread` class**, **Task Parallel Library (TPL)**, or **async/await** for modern C# approaches.
+- Multiple ways allow flexibility depending on the complexity of tasks.
+
+### 🔹 Common Thread Methods
+- **Start:** Begins thread execution.
+- **Sleep:** Pauses a thread for a specified time.
+- **Join:** Waits for a thread to finish execution.
+- **Abort (deprecated):** Stops a thread (not recommended in modern C#).
+- **IsAlive / ThreadState:** Check thread status.
+
+### ⚡ Best Practices
+- Avoid shared resource conflicts by using **locks and synchronization mechanisms**.
+- Prefer **Task-based or async approaches** for modern, efficient multithreading.
+- Keep thread operations concise to prevent deadlocks and performance issues.
+
+---
+
+# 📅 Day 33 — Introduction to ThreadPool in Multithreading
+
+**Date:** 06/02/2026
+**Topic:** ThreadPool in C#
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 ThreadPool in C#
+- **ThreadPool** provides a pool of reusable threads managed by the runtime.
+- Helps in **efficiently executing multiple short-lived tasks** without creating new threads each time.
+
+### 🔹 Benefits
+- Reduces **overhead** of thread creation and destruction.
+- Improves **performance and resource management** for concurrent tasks.
+- Automatically manages the **number of active threads** based on system workload.
+
+### 🔹 Use Cases
+- Ideal for **scenario-based problems** requiring many small tasks.
+- Suitable for **I/O operations, background processing, and task scheduling**.
+
+### ⚡ Best Practices
+- Avoid long-running tasks in the ThreadPool to prevent **blocking other tasks**.
+- Prefer using **Task Parallel Library (TPL)** for more advanced and flexible task management.
+- Monitor thread pool usage to ensure **efficient resource utilization**.
+
+---
+# 📅 Day 34 — Introduction to Task & async/await in Multithreading
+
+**Date:** 09/02/2026
+**Topic:** Task-Based Asynchronous Programming in C#
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Tasks in C#
+- **Task** represents an asynchronous operation that can run concurrently with other tasks.
+- Provides **better control over threading** compared to manually creating threads.
+
+### 🔹 async/await
+- **async** marks a method as asynchronous.
+- **await** pauses the execution of a method until the awaited task completes, without blocking the main thread.
+- Simplifies writing **asynchronous, non-blocking code** for I/O operations and long-running tasks.
+
+### 🔹 Benefits
+- Improves **application responsiveness**.
+- Reduces complexity compared to manual thread management.
+- Ensures **efficient resource utilization** in multithreaded applications.
+
+### ⚡ Best Practices
+- Keep async methods **short and focused**.
+- Avoid blocking calls inside async methods.
+- Combine **Task and async/await** with proper exception handling for robust applications.
+
+---
+# 📅 Day 35 — MSSQL Programming Concepts
+
+**Date:** 10/02/2026
+**Topic:** Advanced SQL Programming & Database Control
+
+---
+
+## 🧩 Key Learnings
+
+### 🔹 Core MSSQL Concepts
+- Practiced SQL syntax, **constraints**, and **keys** to ensure data integrity.
+- Learned best practices for database schema design and relational modeling.
+
+### 🔹 Joins & Subqueries
+- Implemented **INNER, LEFT, RIGHT, and FULL joins** for data retrieval.
+- Used **nested queries** to solve complex retrieval scenarios.
+
+### 🔹 Aggregations & Grouping
+- Applied **aggregate functions** (SUM, COUNT, AVG) and **GROUP BY** for analyzing data efficiently.
+
+### 🔹 Stored Procedures & Functions
+- Created **stored procedures** and **user-defined functions** to encapsulate reusable logic.
+
+### 🔹 Views & Security
+- Used **views** for abstraction and simplified data access.
+- Applied **DCL commands** to manage user roles, permissions, and security.
+
+### 🔹 Cursors
+- Explored **row-by-row data processing** using cursors for specific use cases.
+
+---
+
+# 📅 Day 36 — Revision & Skill Development
+
+**Date:** 11/02/2026
+**Topic:** Comprehensive Revision & Soft Skills Enhancement
+
+---
+
+## 🧩 Key Activities
+
+### 🔹 Revision of Previous Topics
+- Reviewed all core concepts including **DSA, OOP, Design Principles, Multithreading, Exception Handling, File Handling, Testing Frameworks, and MSSQL**.
+
+### 🔹 Strengthened Core Understanding
+- Focused on clarifying doubts, revisiting **complex concepts**, and reinforcing **best practices**.
+
+### 🔹 Soft Skills Development
+- Participated in sessions to improve **communication, confidence, and overall professional skills**.
+
+---
