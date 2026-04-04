@@ -1,0 +1,14 @@
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\bin\Debug\net8.0\GrocessaryManagementSystem.exe
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\bin\Debug\net8.0\GrocessaryManagementSystem.deps.json
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\bin\Debug\net8.0\GrocessaryManagementSystem.runtimeconfig.json
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\bin\Debug\net8.0\GrocessaryManagementSystem.dll
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\bin\Debug\net8.0\GrocessaryManagementSystem.pdb
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\GrocessaryManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\GrocessaryManagementSystem.AssemblyInfoInputs.cache
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\GrocessaryManagementSystem.AssemblyInfo.cs
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\GrocessaryManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\GrocessaryManagementSystem.dll
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\refint\GrocessaryManagementSystem.dll
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\GrocessaryManagementSystem.pdb
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\GrocessaryManagementSystem.genruntimeconfig.cache
+C:\Users\golub\Desktop\visual studio project\Review\GrocessaryManagementSystem\GrocessaryManagementSystem\obj\Debug\net8.0\ref\GrocessaryManagementSystem.dll

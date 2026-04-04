@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "GrocessaryManagementSystem/1.0.0": {
+        "runtime": {
+          "GrocessaryManagementSystem.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GrocessaryManagementSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
